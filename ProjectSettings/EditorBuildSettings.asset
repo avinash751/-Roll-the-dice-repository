@@ -6,10 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-<<<<<<< HEAD
-    path: Assets/armaan/player.unity
-=======
-    path: Assets/armaan/Scenes/player.unity
->>>>>>> Avinash--Branch
+    path: Assets/Scenes/player.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects: {}
