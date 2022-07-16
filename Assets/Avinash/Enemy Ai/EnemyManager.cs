@@ -7,7 +7,9 @@ using Random = UnityEngine.Random;
 public class EnemyManager : MonoBehaviour
 {
     public static EnemyManager instance { get; private set;}
-    public float CurrentTime;
+
+    public float EventTimeThreshold;
+
     [Header(" Finding references info")]
     public List<EnemyAi> EnemyList = new List<EnemyAi>();
 
@@ -33,7 +35,22 @@ public class EnemyManager : MonoBehaviour
        
     }
 
-   
+    private void Update()
+    {
+        
+    }
+
+    float RequiredTimeTOPlayAnEnemyEvent()
+    {
+
+    }
+
+    void PlayAnEvent()
+    {
+
+    }
+
+
 
 
 
