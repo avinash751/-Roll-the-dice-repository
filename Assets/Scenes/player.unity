@@ -300,7 +300,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098c8cbe0d5651e498641d3751efaf6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentTime: 0
+  TimeAddon: 5
+  TimeConfirmed: 0
+  EventPlayed: 1
+  TotalTimeForEvent: 0
+  EventNumber: 0
+  EventHealthAddon: 3
+  EventDamageAddon: 3
   EnemyList: []
 --- !u!4 &148916783
 Transform:
@@ -464,6 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f542b9fd8a3c445932970cd2eee64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentTime: 0
 --- !u!4 &539713340
 Transform:
   m_ObjectHideFlags: 0
