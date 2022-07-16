@@ -41,9 +41,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2396032385509986069}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1ab49efef729334289ed9296ac132d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b8df4d6d6f80ee4d9c20a46a859a489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawnrate: 0.5
+  Spawnrate: 1
   PrefabToSpawn: {fileID: 5259975207493022059, guid: 829462c0591db9d4f9f6d5dd949dfd41, type: 3}
   XSpawnRandomness: 2

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+public class SpawnManager1 : MonoBehaviour
 {
     public float Spawnrate;
     public GameObject PrefabToSpawn;
