@@ -12,7 +12,6 @@ public class EnemyAi : MonoBehaviour,IDamagable
     public int Health;
     public int MaxHealth;
     public int Damage;
-    public float PushForce;
 
     Rigidbody2D rb;
     void Start()
@@ -39,13 +38,11 @@ public class EnemyAi : MonoBehaviour,IDamagable
         {
             Health -= Damage;
             Debug.Log("enemy taken Damage");
-            
         }
         else if (Health <= 0)
         {
             Debug.Log("enemy died");
-            EnemyManager.instance.RemoveEnemyFromList(this);
-            Destroy(gameObject);
+            EnemyManager.instance.RemoveEnemyFromList(this);  
         }
     }
 
@@ -55,7 +52,6 @@ public class EnemyAi : MonoBehaviour,IDamagable
         if (damagable != null)
         {
             damagable.TakeDamage(Damage);
-
         }
 
     }

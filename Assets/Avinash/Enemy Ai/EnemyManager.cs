@@ -55,7 +55,7 @@ public class EnemyManager : MonoBehaviour
             TimeConfirmed = true;
             EventPlayed = false;
             TotalTimeForEvent = GameManager.instance.CurrentTime + TimeAddon;
-            return TotalTimeForEvent; 
+            return TotalTimeForEvent; ;
         }
         else
         {
@@ -94,8 +94,6 @@ public class EnemyManager : MonoBehaviour
             EventPlayed = true;
         }
     }
-
-    // Enemy dice events 
     public void IncreaseHealth()
     {
         foreach(EnemyAi ai in EnemyList)
@@ -130,8 +128,6 @@ public class EnemyManager : MonoBehaviour
             Debug.Log("decrease damage");
         }
     }
-
-
     public void AddEnemyToList(EnemyAi enemy)
     {
        EnemyList.Add(enemy);
