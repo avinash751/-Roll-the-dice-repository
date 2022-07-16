@@ -1199,6 +1199,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 73956130}
     m_Modifications:
+    - target: {fileID: 323764275623080082, guid: 180f3294c7e38a14ab876bbf58e6802b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 872a97c8640e93a4cb1c56a8af6477df, type: 2}
     - target: {fileID: 323764275837642954, guid: 180f3294c7e38a14ab876bbf58e6802b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1247,6 +1251,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bazooka Launcher
       objectReference: {fileID: 0}
+    - target: {fileID: 323764276706019855, guid: 180f3294c7e38a14ab876bbf58e6802b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 865a2d9eb22451d4496dfd43321e43f8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 180f3294c7e38a14ab876bbf58e6802b, type: 3}
 --- !u!1001 &446584232499077581
