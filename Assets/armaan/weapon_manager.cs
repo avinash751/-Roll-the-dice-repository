@@ -6,6 +6,9 @@ public class weapon_manager : MonoBehaviour
 {
     public GameObject pistol;
     public Transform meeple;
+    public GameObject sheild;
+    public Transform meeple2;
+    private int index = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +19,11 @@ public class weapon_manager : MonoBehaviour
     void Update()
     {
        
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("input");
-
-            gameObject.transform.GetChild(1).gameObject.SetActive(true);
+            index = Random.Range(0, 2);
+            gameObject.transform.GetChild(index).gameObject.SetActive(true);
+            
         }
     }
 }
