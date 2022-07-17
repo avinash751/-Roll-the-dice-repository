@@ -29,6 +29,7 @@ public class EnemyAi : MonoBehaviour,IDamagable
 
     void FollowTarget()
     {
+       
         transform.position = (Vector2.MoveTowards(transform.position, Target.transform.position, MoveSpeed * Time.deltaTime));
     }
 

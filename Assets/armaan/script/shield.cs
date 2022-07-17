@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class shield : MonoBehaviour
 {
-    public int health = 20;
+    public static int health = 20;
     // Start is called before the first frame update
     void Start()
     {

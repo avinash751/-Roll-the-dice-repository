@@ -127,6 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c5f23c1888781a44b2c1fc2e8b7e2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 0}
+  Target: {fileID: 9156473076469362908, guid: 4e16117799348ae468fe7e34a9c2b6b5, type: 3}
   MoveSpeed: 2
+  Health: 0
+  MaxHealth: 0
   Damage: 1
