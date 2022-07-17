@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spawnrate: 1
-  PrefabToSpawn: {fileID: 5259975207493022059, guid: 829462c0591db9d4f9f6d5dd949dfd41, type: 3}
+  PrefabToSpawn: {fileID: 7978475575195247968, guid: 3c5e08246ddb0914d92025c64bc8c74b, type: 3}
   XSpawnRandomness: 2

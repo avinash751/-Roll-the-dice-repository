@@ -30,6 +30,7 @@ public class EnemyAi : MonoBehaviour,IDamagable
 
     void FollowTarget()
     {
+        Target = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
         transform.position = (Vector2.MoveTowards(transform.position, Target.transform.position, MoveSpeed * Time.deltaTime));
     }
 
@@ -38,12 +39,12 @@ public class EnemyAi : MonoBehaviour,IDamagable
         if (Health > 0)
         {
             Health -= Damage;
-            Debug.Log("enemy taken Damage");
+            //Debug.Log("enemy taken Damage");
             
         }
         else if (Health <= 0)
         {
-            Debug.Log("enemy died");
+            //Debug.Log("enemy died");
             EnemyManager.instance.RemoveEnemyFromList(this);
             Destroy(gameObject);
         }
