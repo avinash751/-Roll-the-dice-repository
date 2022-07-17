@@ -8,6 +8,10 @@ public class weapon_manager : MonoBehaviour
     public Transform meeple;
     public GameObject sheild;
     public Transform meeple2;
+    public GameObject launcher;
+    public Transform meeple3;
+    public GameObject sword;
+    public Transform meeple4;
     private int index = 0;
     private int cou;
     // Start is called before the first frame update
@@ -24,7 +28,7 @@ public class weapon_manager : MonoBehaviour
         {
             weapondeactive();
             weaponreset();
-            index = Random.Range(0, 2);
+            index = Random.Range(0, 4);
             cou = index;
             gameObject.transform.GetChild(index).gameObject.SetActive(true);
             
