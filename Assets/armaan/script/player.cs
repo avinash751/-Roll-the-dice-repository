@@ -5,11 +5,13 @@ using UnityEngine;
 public class player : MonoBehaviour
 {
     private CharacterController controller;
-    public float speed = 5.0f;
-    public float gravity = 1.0f;
+    public static float speed = 5.0f;
+    public static float gravity = 0.75f;
     public float jumpheight = 15.0f;
     private float yvelocity;
-    private bool candoublejump = false;
+    public static bool move = true;
+    public static bool jump = true;
+
  
  
     // Start is called before the first frame update
@@ -26,29 +28,24 @@ public class player : MonoBehaviour
         Vector3 velocity = direction * speed;
         if (controller.isGrounded == true)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && jump == true)
             {
-                yvelocity = jumpheight;
-                
+                yvelocity = jumpheight;              
             }
 
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                if (candoublejump == true)
-                {
-                    yvelocity += jumpheight * 2;
-                    candoublejump = false;
-                }
-
-            }
-
             yvelocity -= gravity;
         }
+
         velocity.y = yvelocity;
-        controller.Move(velocity * Time.deltaTime);
+
+        if (move == true)
+        {
+            controller.Move(velocity * Time.deltaTime);
+        }
+        
     }
 
 }
