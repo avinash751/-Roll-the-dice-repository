@@ -20,6 +20,7 @@ public class EnemyManager : MonoBehaviour
     [Header(" Finding references info")]
 
     public List<EnemyAi> EnemyList = new List<EnemyAi>();
+    public List<SpawnManager1> spawnList = new List<SpawnManager1>();
 
 
     public delegate void EnemyDiceEvent();
@@ -29,12 +30,9 @@ public class EnemyManager : MonoBehaviour
         if(instance == null)
         {   
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+       
     }
 
     public void Start()
@@ -141,4 +139,14 @@ public class EnemyManager : MonoBehaviour
     {
         EnemyList.Remove(enemy);
     }
+    public void AddSpawnMangerToList(SpawnManager1 spawn)
+    {
+        spawnList.Add(spawn);
+    }
+
+    public void removeSpawnMangeroList(SpawnManager1 spawn)
+    {
+        spawnList.Remove(spawn);
+    }
+
 }

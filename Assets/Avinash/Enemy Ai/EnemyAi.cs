@@ -53,7 +53,7 @@ public class EnemyAi : MonoBehaviour,IDamagable
     private void OnCollisionEnter(Collision collision)
     {
         IDamagable damagable = collision.gameObject.GetComponent<IDamagable>();
-        if (damagable != null)
+        if (damagable != null && collision.gameObject.tag != "Enemy")
         {
             damagable.TakeDamage(Damage);
 

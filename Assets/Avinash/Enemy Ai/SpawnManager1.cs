@@ -8,10 +8,14 @@ public class SpawnManager1 : MonoBehaviour
     public GameObject PrefabToSpawn;
     Vector3 SpawnPoint;
     public float XSpawnRandomness;
-    
 
 
-   
+
+    private void Awake()
+    {
+        EnemyManager.instance.AddSpawnMangerToList(this);
+    }
+
     void Start()
     {
         InvokeRepeating(nameof(SpawnEnemy), Spawnrate, Spawnrate);

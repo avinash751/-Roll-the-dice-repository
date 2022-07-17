@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using TMPro;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -8,7 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject StartMenu;
     public GameObject EndMenu;
     public SpawnManager1 spawnManager1;
-
+    
     public  delegate void CurrentGameState();
     static CurrentGameState currentGameState;
      
@@ -35,6 +38,12 @@ public class GameManager : MonoBehaviour
         StartMenu = GameObject.Find("Start Screen");
         EndMenu = GameObject.Find("Game Over Screen");
         EndMenu.SetActive(false);
+
+        
+        foreach(SpawnManager1 s in EnemyManager.instance.spawnList)
+        {
+            s.transform.gameObject.SetActive(false);
+        }
     }
 
     public void Start()
@@ -62,6 +71,11 @@ public class GameManager : MonoBehaviour
 
     public void ChangeStateToPlay()
     {
+       
+        foreach (SpawnManager1 s in EnemyManager.instance.spawnList)
+        {
+            s.transform.gameObject.SetActive(true);
+        }
         StartMenu.SetActive(false);
         gameState = GameStates.Play;
         ChnageStateTo(PlayState);
@@ -80,8 +94,8 @@ public class GameManager : MonoBehaviour
     }
     void StartState()
     {
-        
-        spawnManager1 = FindObjectOfType<SpawnManager1>();
+
+       
         CurrentTime = 0;
         gameState = GameStates.Start;
         EnableGameObjects(false, false);
@@ -99,10 +113,14 @@ public class GameManager : MonoBehaviour
 
     void EndState()
     {
+        foreach (SpawnManager1 s in EnemyManager.instance.spawnList)
+        {
+            s.transform.gameObject.SetActive(false);
+        }
         gameState = GameStates.End;
         EnableGameMenues(false, true);
         EnableGameObjects(false, false);
-        spawnManager1.gameObject.SetActive(false);
+        
     }
 
     void EnableGameObjects(bool player,bool enemies)
@@ -129,6 +147,7 @@ public class GameManager : MonoBehaviour
     void CountDownTime()
     {
         CurrentTime += Time.deltaTime;
+        
     }
 
     public void restartGame()
