@@ -16,11 +16,7 @@ public class PlayerManager : MonoBehaviour, IDamagable
         if(instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
+           
         }
     }
     void Start()

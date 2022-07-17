@@ -21,7 +21,7 @@ public class SpawnManager1 : MonoBehaviour
     {
         SpawnPoint = new Vector3(Random.Range(-XSpawnRandomness, XSpawnRandomness), 0, 0) + transform.position;
         GameObject EnemyDuplicate = Instantiate(PrefabToSpawn, SpawnPoint, Quaternion.identity);
-        EnemyDuplicate.GetComponent<EnemyAi>().Target = GameObject.FindGameObjectWithTag("Player");
+     
     }
 
     
