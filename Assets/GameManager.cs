@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
         gameState = GameStates.Play;
         ChnageStateTo(PlayState);
         Debug.Log("play state");
-        spawnManager1.gameObject.SetActive(true);
+        
         
     }
 
